@@ -1,2 +1,2 @@
 # frocli
-Tiny but useful CLI snippets for everday use.
+Tiny but useful CLI snippets for everyday use.
