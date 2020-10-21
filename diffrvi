@@ -1,0 +1,4 @@
+#!/bin/bash
+diff -r $1 $2 > /tmp/diffrvi
+vim /tmp/diffrvi
+rm /tmp/diffrvi

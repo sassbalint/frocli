@@ -1,0 +1,4 @@
+#!/bin/bash
+# bemeneti formátum: kulcs <TAB> érték
+# az azonos kulcs értékeit összegzi, kimenet formátuma ua.
+awk -F '	' '{ a[$1] += $2 } END { for (i in a) printf "%s\t%d\n", i, a[i] }'

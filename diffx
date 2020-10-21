@@ -1,0 +1,43 @@
+#!/bin/bash
+#
+# 2 fájlnak a  "valamijét" hasonlítja össze
+#
+# XXX meg lehetne próbálni megcsinálni általánosságban eval -lal
+#
+# pl.:
+#  diffx a b "cut -f 1"
+#  diffx a b "head -2"
+#  diffx a b "grep -v W" "sed s/[BE]//"
+#
+# XXX max 3 parancsot lehet megadni ($3, $4, $5) -- sztem elég lesz :)
+
+F=/tmp/`echo "dif-$1-$2" | sed "s/[\/ ]/_/g"`
+
+A=$F.a
+B=$F.b
+
+if [ $# -lt 2 ]
+then
+  echo "min. 2 param kell: a 2 összehasonlítandó fájl"
+  exit 1
+elif [ $# -eq 2 ]
+then
+  cat $1 > $A
+  cat $2 > $B
+elif [ $# -eq 3 ]
+then
+  cat $1 | $3 > $A
+  cat $2 | $3 > $B
+elif [ $# -eq 4 ]
+then
+  cat $1 | $3 | $4 > $A
+  cat $2 | $3 | $4 > $B
+elif [ $# -eq 5 ]
+then
+  cat $1 | $3 | $4 | $5 > $A
+  cat $2 | $3 | $4 | $5 > $B
+fi
+
+diff $A $B
+rm $A $B
+

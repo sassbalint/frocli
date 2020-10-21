@@ -1,0 +1,17 @@
+#!/bin/bash
+DIF=/tmp/dif
+diff -r $1 $2 > $DIF
+
+if [ $? == 0 -o $? == 1 ]
+then
+	if [ -s $DIF ]
+	then
+		vim -c "/^diff" $DIF
+	else
+		echo "$0: Nincs különbség."
+	fi
+fi
+
+rm $DIF
+
+# $? == 2 esetén van valami hiba a diff-fel, de azt ő úgyis kiírja

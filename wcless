@@ -1,0 +1,10 @@
+#!/bin/bash
+
+DATA=/tmp/wcless.$$.data
+WC=/tmp/wcless.$$.wc
+
+cat > $DATA
+cat $DATA | wc > $WC
+cat $WC $DATA | less
+rm -f $WC $DATA
+

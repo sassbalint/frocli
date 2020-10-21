@@ -1,0 +1,40 @@
+#!/bin/bash
+# XXX ahol lehet, érték-ellenõrzés is
+
+MFDIR=/home/joker/bin
+TYPES=`ls $MFDIR/Makefile* | sed "s/.*\.//"`
+
+FILE=file
+if [ ! -z "$1" ]
+then
+  FILE=$1
+fi
+
+TYPE=tex
+if [ ! -z "$2" ]
+then
+  if echo "$TYPES" | grep -q "$2"
+  then
+    TYPE=$2
+  else
+    echo "! Bad type: '$2' (Available types: $TYPES)"
+    exit 1
+  fi
+fi
+
+MODES=`cat $MFDIR/Makefile.$TYPE | grep "^[^	][^ ]*:" | sed "s/:.*//"`
+
+MODE=all
+if [ ! -z "$3" ]
+then
+  if echo "$MODES" | grep -q "$3"
+  then
+    MODE=$3
+  else
+    echo "! Bad mode: '$3' (Available modes in type '$TYPE': $MODES)"
+    exit 1
+  fi
+fi
+
+echo "make -f $MFDIR/Makefile.$TYPE FILE\=$FILE $MODE"
+make -f $MFDIR/Makefile.$TYPE FILE\=$FILE $MODE

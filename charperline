@@ -1,0 +1,3 @@
+#!/bin/bash
+# szöveg -> 1-sor-1-kar
+sed "s/\(.\)/\1\n/g"
