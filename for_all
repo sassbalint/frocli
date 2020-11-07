@@ -1,0 +1,13 @@
+#!/bin/bash
+
+INPUT=$1
+COMMAND=$2
+
+for i in $INPUT
+do
+    echo "--- $i"
+    cat $i | $COMMAND
+done
+
+# XXX Iván tippjét nézzem meg! :)
+

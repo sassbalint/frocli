@@ -14,6 +14,8 @@ Quite powerful tool. My favourite. Examples:\
 `diffvi` = `diff` + `vim` to be able to look at the result more thoroughly\
 `diffrvi` = `diff -r` + `vim`
 
+`for_all INPUT COMMAND` = run `COMMAND` for all `INPUT` files prefixing each output with `--- FILENAME`
+
 `cols` = select columns form `tsv` file (by `cut`) without the need to research how to define separator every time\
 `sstat` = create frequency list / histogram\
 Maybe the one I have used most, probably several thousand times.\
