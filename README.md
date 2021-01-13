@@ -14,7 +14,8 @@ Quite powerful tool. My favourite. Examples:\
 `diffvi` = `diff` + `vim` to be able to look at the result more thoroughly\
 `diffrvi` = `diff -r` + `vim`
 
-`diff_by_git` = `diff` word-by-word using `git`s `--word-diff`
+`diff_by_git` = `diff` word-by-word using `git`s `--word-diff`\
+`diff_by_git_char` = `diff` char-by-char using `git`s `--word-diff`
 
 `for_all INPUT COMMAND` = run `COMMAND` for all `INPUT` files prefixing each output with `--- FILENAME`
 

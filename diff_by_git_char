@@ -1,0 +1,2 @@
+#!/bin/bash
+git diff --no-index --word-diff --word-diff-regex=. --unified=0 "$@"
