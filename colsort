@@ -1,0 +1,11 @@
+#!/bin/bash
+
+by_columns=
+for i in $@
+do
+    j=`echo $i | sed "s/\(.*\)/-k\1,\1 /"`
+    by_columns="$by_columns$j"
+done
+
+sort -t $'\t' $by_columns
+

@@ -20,6 +20,8 @@ Quite powerful tool. My favourite. Examples:\
 `for_all INPUT COMMAND` = run `COMMAND` for all `INPUT` files prefixing each output with `--- FILENAME`
 
 `cols` = select columns form `tsv` file (by `cut`) without the need to research how to define separator every time\
+`colsort COL1 COL2` = sort a `tsv` file by `COL1` then by `COL2` ...
+
 `sstat` = create frequency list / histogram\
 Maybe the one I have used most, probably several thousand times.\
 `wcless` = `wc` + `less` as it is useful to know the lenght of the output
