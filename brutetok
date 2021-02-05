@@ -1,0 +1,3 @@
+#!/bin/bash
+PUNCT=".,:;?!"
+sed "s/\([^$PUNCT]\)\([$PUNCT]\)/\1 \2/g"
