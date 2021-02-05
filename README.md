@@ -38,3 +38,11 @@ Maybe the one I have used most, probably several thousand times.\
 `merge_two_lines` = merge line#1 and line#2 then line#3 and line#4 then ...
 
 `brutetok` = super-primitive brute-force tokenizer
+
+`lower` = lowercase _Hungarian_ text
+
+To create a full-fledged natural language processing pipeline just:
+```bash
+cat text.txt | lower | brutetok | wordperline | sstat | les
+```
+
