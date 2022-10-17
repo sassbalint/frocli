@@ -1,0 +1,1 @@
+python3 -c "import sys, html; [sys.stdout.write(html.unescape(line)) for line in sys.stdin]"

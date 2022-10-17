@@ -41,8 +41,10 @@ Maybe the one I have used most, probably several thousand times.\
 
 `lower` = lowercase _Hungarian_ text
 
+`html-unescape` = `&#x2013;` -> `–` on stdin
+
 To create a full-fledged natural language processing pipeline just:
 ```bash
-cat text.txt | lower | brutetok | wordperline | sstat | les
+cat text.txt | lower | brutetok | wordperline | sstat | less
 ```
 
