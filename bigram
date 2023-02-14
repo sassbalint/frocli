@@ -1,0 +1,11 @@
+#!/bin/bash
+
+ONE=b_tmp_1
+TWO=b_tmp_2
+
+cat > $TWO
+( echo ; cat $TWO ) > $ONE
+paste $ONE $TWO
+
+rm -r $ONE $TWO
+

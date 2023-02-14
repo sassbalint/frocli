@@ -43,8 +43,10 @@ Maybe the one I have used most, probably several thousand times.\
 
 `html-unescape` = `&#x2013;` -> `–` on stdin
 
+`bigram` = create bigrams from lines
+
 To create a full-fledged natural language processing pipeline just:
 ```bash
-cat text.txt | lower | brutetok | wordperline | sstat | less
+cat text.txt | lower | brutetok | wordperline | bigram | sstat | wcless
 ```
 
